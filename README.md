@@ -110,3 +110,19 @@ The server will run on http://localhost:8080 .
 - **URL**: `/api/bookings/:id`
 - **Method**: `GET`
 
+
+## Middleware & Validation
+
+- **Joi Validation**:  
+  All incoming requests for registration, login, and booking are validated using Joi to ensure data integrity and prevent malformed requests.
+
+- **Bcrypt**:  
+  Passwords are securely hashed using Bcrypt before storing them in the database to enhance security.
+
+- **JWT Authentication**:  
+  All protected routes such as activity booking and fetching user bookings are secured using JWT-based authentication. Users must include a valid JWT token in the `Authorization` header to access these routes.
+
+  
+## Conclusion
+
+This project serves as a basic backend for an activity booking system with authentication and role-based access control. It follows modern best practices for security, validation, and code organization.
